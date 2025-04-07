@@ -1,0 +1,89 @@
+.certificates-section {
+    padding: 40px 20px; /* Add some padding around the section */
+  background-color: rgba(0, 0, 0, 0.5);
+    text-align: center; /* Center the heading */
+  }
+  
+  .certificates-section h2 {
+    margin-bottom: 30px; /* Space below the heading */
+    font-size: 2em;
+    color: #f9f0f0;
+  }
+  
+  .certificates-grid {
+    display: grid;
+    /* Creates columns: repeat(auto-fit, minmax(280px, 1fr))
+       - auto-fit: Adjusts the number of columns based on available space
+       - minmax(280px, 1fr): Each column is at least 280px wide, but can grow equally (1fr)
+    */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px; /* Space between the certificate cards */
+    max-width: 1200px; /* Optional: Limit the max width of the grid */
+    margin: 0 auto; /* Center the grid if max-width is set */
+  }
+  
+  .certificate-card {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #e0e0e0; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px;
+    text-align: left; /* Align text inside card to the left */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    display: flex; /* Use flexbox for internal layout */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: space-between; /* Push link to bottom if needed */
+  }
+  
+  .certificate-card:hover {
+    transform: translateY(-5px); /* Lift card slightly on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
+  }
+  
+  .certificate-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #ede3e3;
+  }
+  
+  .certificate-issuer,
+  .certificate-date {
+    font-size: 0.95em;
+    color: #f5eded;
+    margin-bottom: 8px;
+  }
+  
+  .certificate-link {
+    display: inline-block; /* Allows setting padding/margin */
+    margin-top: 15px; /* Space above the link */
+    padding: 8px 15px;
+    background-color: #007bff; /* Example primary color */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    align-self: flex-start; /* Align link to the start of the flex container */
+  }
+  
+  .certificate-link:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  
+  /* Responsive adjustments (optional) */
+  @media (max-width: 600px) {
+    .certificates-section {
+      padding: 30px 15px;
+    }
+  
+    .certificates-section h2 {
+      font-size: 1.8em;
+    }
+  
+    .certificates-grid {
+      /* Stack cards vertically on very small screens if desired */
+       /* grid-template-columns: 1fr;  */
+       /* Or keep the auto-fit behavior which often works well */
+      gap: 20px;
+    }
+  }

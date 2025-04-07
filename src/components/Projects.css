@@ -1,0 +1,198 @@
+/* src/components/Projects.css */
+
+/* --- Section Styling --- */
+.projects-section {
+    padding: 60px 20px;
+    background-color: rgba(0, 0, 0, 0.5);  }
+  
+  .projects-heading {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: #ebeff2; /* Dark blue/grey */
+    font-weight: 600;
+  }
+  
+  .projects-subheading {
+    text-align: center;
+    font-size: 1.15em;
+    color: #f9f4f4;
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* --- Grid Layout --- */
+  .projects-grid {
+    display: grid;
+    /* Responsive grid: min 300px width, max 1fr (equal space) */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; /* Space between cards */
+    max-width: 1200px; /* Limit overall width */
+    margin: 0 auto; /* Center the grid container */
+  }
+  
+  /* --- Project Card Styling --- */
+  .project-card {
+    background-color: rgba(0, 0, 0, 0.5);    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden; /* Keep image corners rounded */
+    display: flex;
+    flex-direction: column; /* Stack image, content, links vertically */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth hover */
+  }
+  
+  .project-card:hover {
+    transform: translateY(-8px); /* Lift card on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12); /* Stronger shadow on hover */
+  }
+  
+  /* --- Image Container & Image --- */
+  .project-image-container {
+    width: 100%;
+    /* aspect-ratio: 16 / 10; Maintain aspect ratio */
+    height: 200px; /* Or fixed height */
+    overflow: hidden; /* Prevents image zoom overflow */
+  }
+  
+  .project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the area, might crop */
+    display: block; /* Remove bottom space */
+    transition: transform 0.4s ease; /* Smooth zoom effect */
+  }
+  
+  .project-card:hover .project-image {
+    transform: scale(1.05); /* Zoom image slightly on card hover */
+  }
+  
+  /* --- Card Content --- */
+  .project-content {
+    padding: 20px 25px;
+    flex-grow: 1; /* Allows content to push links down */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .project-title {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #f9f3f3;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .project-description {
+    font-size: 0.95em;
+    color: #f7f3f3;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Takes up available space */
+  }
+  
+  /* --- Tags --- */
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; /* Space between tags */
+    margin-top: auto; /* Push tags towards the bottom of content area if description is short */
+    padding-bottom: 10px; /* Space before links */
+  }
+  
+  .project-tag {
+    background-color: #e9ecef; /* Light grey background */
+    color: #495057; /* Dark grey text */
+    padding: 4px 10px;
+    border-radius: 15px; /* Pill shape */
+    font-size: 0.8em;
+    font-weight: 500;
+  }
+  
+  /* --- Links Area --- */
+  .project-links {
+    padding: 15px 25px 20px; /* Padding around links */
+    border-top: 1px solid #eee; /* Subtle separator line */
+    display: flex;
+    gap: 15px; /* Space between buttons */
+    flex-wrap: wrap; /* Allow buttons to wrap if needed */
+  }
+  
+  .project-link-button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  }
+  
+  /* Live Demo Button */
+  .project-link-button.live {
+    background-color: #007bff; /* Primary color */
+    color: #fff;
+  }
+  
+  .project-link-button.live:hover {
+    background-color: #0056b3; /* Darker primary */
+    color: #fff;
+    transform: scale(1.03); /* Slight grow effect */
+  }
+  
+  /* Repo Button */
+  .project-link-button.repo {
+    background-color: #f8f9fa; /* Light background */
+    color: #343a40; /* Dark text */
+    border: 1px solid #ddd; /* Subtle border */
+  }
+  
+  .project-link-button.repo:hover {
+    background-color: #e2e6ea; /* Slightly darker grey */
+    color: #343a40;
+    border-color: #ccc;
+    transform: scale(1.03); /* Slight grow effect */
+  }
+  
+  
+  /* --- Responsive Adjustments --- */
+  @media (max-width: 768px) {
+    .projects-heading {
+      font-size: 2.1em;
+    }
+    .projects-grid {
+       /* Adjust minmax for tablet/mobile */
+       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+       gap: 25px;
+    }
+    .project-title {
+        font-size: 1.3em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+     .projects-heading {
+        font-size: 1.9em;
+    }
+     .projects-subheading {
+        font-size: 1em;
+        margin-bottom: 40px;
+    }
+     .projects-grid {
+         /* Stack cards on very small screens */
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+     .project-content {
+        padding: 15px 20px;
+    }
+     .project-links {
+        padding: 15px 20px;
+    }
+    .project-link-button {
+        width: 100%; /* Make buttons full width for easier tapping */
+        box-sizing: border-box;
+    }
+  }

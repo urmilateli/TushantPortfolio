@@ -1,0 +1,175 @@
+/* src/components/TestimonialsCarousel.css */
+
+.testimonials-carousel-section {
+  padding: 40px 20px;
+  background-color: rgba(0, 0, 0, 0.5);  
+  text-align: center;
+}
+
+.testimonials-carousel-heading {
+  font-size: 2em; /* Adjust heading size */
+  margin-bottom: 30px;
+  color: #f6f1f1;
+}
+
+.carousel-container {
+  max-width: 600px; /* Max width of the carousel */
+  margin: 0 auto; /* Center the carousel */
+  position: relative; /* Needed for absolute positioning of buttons */
+  background-color: rgba(0, 0, 0, 0.5);  
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Prevents content spillover, useful for animations */
+  padding: 20px 50px; /* Add padding inside container, space for buttons */
+  min-height: 250px; /* Ensure a minimum height */
+  display: flex; /* Helps center card vertically if needed */
+  align-items: center; /* Center card vertically */
+  justify-content: center; /* Center card horizontally */
+}
+
+.testimonial-card-wrapper {
+    /* This wrapper helps manage transitions if you add them */
+    width: 100%;
+}
+
+/* --- Card Styles (Adapted for Carousel) --- */
+.carousel-testimonial-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 15px; /* Padding inside the card */
+}
+
+.carousel-testimonial-image {
+  width: 70px; /* Slightly smaller image for carousel */
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #eee;
+}
+
+.carousel-testimonial-quote {
+  font-style: italic;
+  color: #fcf6f6;
+  margin-bottom: 15px;
+  font-size: 1em;
+  line-height: 1.6;
+  max-width: 90%; /* Ensure quote doesn't stretch too wide */
+}
+
+.carousel-author-info {
+  margin-top: auto; /* Pushes info down */
+}
+
+.carousel-testimonial-author {
+  font-weight: bold;
+  color: #f3eded;
+  margin-bottom: 3px;
+  margin-top: 0;
+}
+
+.carousel-testimonial-title {
+  font-size: 0.9em;
+  color: #f7f0f0;
+  margin: 0;
+}
+
+
+/* --- Navigation Buttons --- */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+  color: rgba(255, 255, 255, 0.842);
+  border: none;
+  border-radius: 50%; /* Circular buttons */
+  width: 40px;
+  height: 40px;
+  font-size: 1.5em; /* Size of the arrow */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10; /* Ensure buttons are above card content */
+}
+
+.carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.carousel-button.prev {
+  left: 10px; /* Position left button */
+}
+
+.carousel-button.next {
+  right: 10px; /* Position right button */
+}
+
+/* --- Navigation Dots --- */
+.carousel-dots {
+  margin-top: 20px; /* Space above the dots */
+  display: flex;
+  justify-content: center;
+  gap: 8px; /* Space between dots */
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc; /* Inactive dot color */
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-dot:hover {
+  background-color: #aaa;
+}
+
+.carousel-dot.active {
+  background-color: #007bff; /* Active dot color (match your theme) */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .carousel-container {
+        padding: 15px 45px; /* Adjust padding */
+        max-width: 90%;
+    }
+    .testimonials-carousel-heading {
+        font-size: 1.8em;
+    }
+    .carousel-testimonial-quote {
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-button {
+        width: 35px;
+        height: 35px;
+        font-size: 1.2em;
+    }
+     .carousel-button.prev {
+        left: 5px;
+    }
+    .carousel-button.next {
+        right: 5px;
+    }
+     .carousel-container {
+        padding: 10px 40px; /* Further reduce padding */
+    }
+    .carousel-testimonial-image {
+        width: 60px;
+        height: 60px;
+    }
+     .carousel-testimonial-quote {
+        font-size: 0.9em;
+    }
+}

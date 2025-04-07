@@ -1,0 +1,189 @@
+/* src/components/BlogSection/BlogSection.css */
+
+/* --- Main Section --- */
+.blog-section {
+    background-color: #1a1a1a; /* Very dark grey background */
+    padding: 5rem 2rem;
+    color: #f0f0f0; /* Light text color */
+    overflow: hidden; /* Prevent accidental horizontal scroll on the section */
+    position: relative;
+  }
+  
+  .blog-section-wrapper {
+    max-width: 1300px; /* Allow slightly wider content */
+    margin: 0 auto;
+    display: flex;
+    gap: 2.5rem;
+    align-items: center; /* Align items vertically */
+  }
+  
+  /* --- Left Intro Section --- */
+  .blog-intro {
+    flex: 0 0 300px; /* Fixed width for the intro section */
+    text-align: left;
+  }
+  
+  .blog-intro-icon {
+    font-size: 3rem;
+    color: #e74c3c; /* Red color for icon */
+    margin-bottom: 1rem;
+    display: block; /* Make it a block element */
+  }
+  
+  .blog-intro-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 1rem;
+  }
+  
+  .blog-intro-description {
+    font-size: 1.1rem;
+    color: #bdc3c7; /* Light grey text */
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  
+  .blog-intro-button {
+    display: inline-block;
+    background-color: #c0392b; /* Darker red */
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .blog-intro-button:hover {
+    background-color: #e74c3c; /* Brighter red on hover */
+  }
+  
+  /* --- Right Blog Cards Container --- */
+  .blog-cards-container {
+    flex: 1; /* Takes remaining space */
+    display: flex;
+    gap: 1.5rem; /* Space between cards */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding-bottom: 1.5rem; /* Add padding to see shadow/scrollbar */
+  
+    /* Hide scrollbar visually (optional, cross-browser) */
+    -ms-overflow-style: none;  /* IE and Edge */ /* Firefox */
+  }
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .blog-cards-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  
+  /* --- Blog Card Styling --- */
+  .blog-card {
+    background-color: #ffffff; /* White background for cards */
+    color: #333; /* Dark text for cards */
+    border-radius: 8px;
+    overflow: hidden; /* Clip image corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    flex: 0 0 300px; /* Fixed width for each card, adjust as needed */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .blog-card-link {
+      text-decoration: none;
+      color: inherit; /* Inherit color from parent */
+      display: block; /* Make link fill the card */
+  }
+  
+  .blog-card-image {
+    display: block;
+    width: 100%;
+    height: 180px; /* Fixed height for images */
+    object-fit: cover; /* Cover the area without distortion */
+  }
+  
+  .blog-card-content {
+    padding: 1rem 1.2rem;
+  }
+  
+  .blog-card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+    /* Limit title to 2 lines with ellipsis (optional) */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: calc(1.1rem * 1.4 * 2); /* Reserve space for 2 lines */
+  }
+  
+  .blog-card-date {
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+    color: #777;
+  }
+  
+  .blog-card-date-icon {
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  /* --- Slider Dots (Optional Visual) --- */
+  .blog-slider-dots {
+    text-align: center;
+    padding-top: 2rem;
+  }
+  
+  .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #555; /* Dark grey inactive dot */
+    margin: 0 5px;
+    cursor: pointer; /* Indicates interactivity (though none added here) */
+  }
+  
+  .dot.active {
+    background-color: #f0f0f0; /* Light active dot */
+  }
+  
+  /* --- Responsive Adjustments --- */
+  @media (max-width: 992px) {
+    .blog-section-wrapper {
+      flex-direction: column; /* Stack intro and cards */
+      align-items: stretch; /* Stretch items to full width */
+      gap: 3rem;
+    }
+  
+    .blog-intro {
+      flex-basis: auto; /* Reset fixed width */
+      text-align: center; /* Center text */
+    }
+  
+    .blog-intro-icon {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  @media (max-width: 768px) {
+      .blog-section {
+          padding: 4rem 1rem;
+      }
+      .blog-card {
+          flex: 0 0 280px; /* Slightly smaller cards on mobile */
+      }
+      .blog-intro-title {
+          font-size: 2.2rem;
+      }
+      .blog-intro-description {
+          font-size: 1rem;
+      }
+  }

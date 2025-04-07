@@ -1,0 +1,65 @@
+/* Background Image - fixed and full screen */
+.background-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../assets/img.jpg'); /* 👈 your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+/* Section with content */
+.about-section {
+  position: relative;
+  padding:  -1rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1; 
+}
+
+/* Text content */
+.about-content {
+  max-width: 800px;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+
+  
+  .about-content h2 {
+    font-size: 2.5rem; /* Adjust heading size */
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .about-content p {
+    font-size: 1.1rem; 
+    line-height: 1.7; 
+    margin-bottom: 1rem;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .about-section {
+      padding: 3rem 1rem;
+      min-height: 50vh;
+      background-attachment: scroll; 
+    }
+  
+    .about-content h2 {
+      font-size: 2rem;
+    }
+  
+    .about-content p {
+      font-size: 1rem;
+    }
+  }

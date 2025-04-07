@@ -1,0 +1,204 @@
+/* src/components/Contact.css */
+
+/* --- General Section Styling --- */
+.contact-section {
+    padding: 60px 20px 80px; /* Added more bottom padding */
+    background-color: rgba(0, 0, 0, 0.5); 
+    text-align: center;
+    overflow-x: hidden; /* Prevent horizontal scrollbars during animations */
+  }
+  
+  /* --- Headings --- */
+  .contact-heading {
+    font-size: 2.5em; /* Slightly larger heading */
+    margin-bottom: 15px;
+    color: #eef3f8; /* Darker, less harsh blue/grey */
+    font-weight: 600;
+  }
+  
+  .contact-subheading {
+    font-size: 1.15em;
+    color: #f1ecec; /* Slightly darker grey */
+    margin-bottom: 50px; /* More space before form */
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+  
+  /* --- Form Container --- */
+  .contact-form {
+    max-width: 650px; /* Slightly wider form */
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5);  
+    padding: 35px 40px; /* More padding */
+    border-radius: 10px; /* Slightly more rounded corners */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); /* Softer, more spread shadow */
+    text-align: left;
+    transition: box-shadow 0.3s ease-in-out; /* Transition shadow on hover (optional) */
+  }
+  
+  /* Optional: Subtle shadow lift on form hover */
+  /*
+  .contact-form:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  }
+  */
+  
+  /* --- Form Grouping & Labels --- */
+  .form-group {
+    margin-bottom: 25px; /* More space between fields */
+    position: relative; /* Needed for potential future floating labels or icons */
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600; /* Slightly bolder labels */
+    color: #f3f5f7; /* Matching darker blue/grey */
+    font-size: 0.9em;
+    text-transform: uppercase; /* Uppercase labels */
+    letter-spacing: 0.5px;
+  }
+  
+  /* --- Input & Textarea Styling --- */
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group textarea {
+    width: 100%;
+    padding: 14px 15px; /* More padding */
+    border: 1px solid #dcdcdc; /* Lighter border */
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.5);  
+    /* Smooth transitions for border, shadow, background */
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  }
+  
+  /* Hover effect for inputs/textarea */
+  .form-group input[type="text"]:hover:not(:focus),
+  .form-group input[type="email"]:hover:not(:focus),
+  .form-group textarea:hover:not(:focus) {
+    border-color: #ababab; /* Darker border on hover */
+  }
+  
+  /* Focus effect for inputs/textarea */
+  .form-group input[type="text"]:focus,
+  .form-group input[type="email"]:focus,
+  .form-group textarea:focus {
+    border-color: #007bff; /* Primary color border on focus */
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15); /* Softer glow effect */
+    background-color: #f8fcff; /* Very subtle background change on focus */
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+    min-height: 120px; /* Slightly taller textarea */
+    line-height: 1.5;
+  }
+  
+  /* --- Submit Button Styling --- */
+  .submit-button {
+    display: inline-block;
+    background: linear-gradient(45deg, #007bff, #0056b3); /* Gradient background */
+    color: white;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 50px; /* Pill shape button */
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3); /* Button shadow */
+    /* Smooth transitions for background, transform, shadow */
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover effect for button */
+  .submit-button:hover:not(:disabled) {
+    background: linear-gradient(45deg, #0069d9, #004085); /* Darker gradient */
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4); /* Enhanced shadow */
+  }
+  
+  /* Active (click) effect for button */
+  .submit-button:active:not(:disabled) {
+    transform: translateY(-1px); /* Smaller lift during click */
+    box-shadow: 0 3px 8px rgba(0, 123, 255, 0.35); /* Reduced shadow */
+  }
+  
+  /* Disabled state for button */
+  .submit-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: #ccc; /* Grey out disabled button */
+    box-shadow: none; /* Remove shadow when disabled */
+    transform: translateY(0); /* Reset transform */
+  }
+  
+  /* --- Submission Messages & Animation --- */
+  .submit-message {
+    margin-top: 20px;
+    padding: 12px 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 500; /* Slightly less bold */
+    /* Apply animation */
+    animation: fadeInUp 0.5s ease-out forwards;
+    opacity: 0; /* Start hidden for animation */
+  }
+  
+  .submit-message.success {
+    background-color: #e6f9ee; /* Softer green */
+    color: #187a3f;
+    border: 1px solid #a7eac1;
+  }
+  
+  .submit-message.error {
+    background-color: #fdecea; /* Softer red */
+    color: #a82a2a;
+    border: 1px solid #f8c8c6;
+  }
+  
+  /* --- Keyframes for Animation --- */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px); /* Start slightly lower */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); /* End at normal position */
+    }
+  }
+  
+  /* --- Responsive Adjustments --- */
+  @media (max-width: 768px) {
+    .contact-heading {
+      font-size: 2.1em;
+    }
+    .contact-form {
+      padding: 25px 20px; /* Adjust padding on smaller screens */
+      max-width: 90%;
+    }
+    .submit-button {
+      padding: 12px 25px;
+      font-size: 1em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contact-heading {
+      font-size: 1.8em;
+    }
+     .contact-subheading {
+      font-size: 1em;
+      margin-bottom: 30px;
+    }
+  }
