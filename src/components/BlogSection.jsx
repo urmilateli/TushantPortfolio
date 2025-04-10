@@ -46,18 +46,18 @@ const BlogSection = () => {
         <div className="blog-intro">
           <FaBookOpen className="blog-intro-icon" />
           <h2 className="blog-intro-title">Blogs</h2>
-          <p className="blog-intro-description">
+          {/* <p className="blog-intro-description">
             Get a dosage of hidden side of digital media in simple words
-          </p>
-          {/* 👇 **** MODIFIED THIS LINK **** 👇 */}
-          <a
+          </p> */}
+  
+          {/* <a
              href="https://www.blogger.com/about/?bpli=1"
              className="blog-intro-button"
-             target="_blank" // Opens the link in a new tab
-             rel="noopener noreferrer" // Security best practice for target="_blank"
+             target="_blank" 
+             rel="noopener noreferrer"
           >
             Check our Blogs ›
-          </a>
+          </a> */}
           {/* 👇 **** END OF MODIFICATION **** 👇 */}
         </div>
 

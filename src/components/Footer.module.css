@@ -1,164 +1,52 @@
-/* src/components/Footer/Footer.module.css */
-
 .footer {
-    /* background-color: rgba(0, 0, 0, 0.5); */ /* Semi-transparent */
-    background-color: #1a1a1a; /* Solid dark background (like previous examples) */
-                                 /* Choose the one you prefer */
-    color: #e0e0e0;
-    padding: 40px 0 20px 0;
-    font-size: 0.9rem;
-    line-height: 1.6;
-  }
-  
-  /* ... (rest of the CSS remains the same as you provided) ... */
-  
-  .footerContainer {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  /* Top Bar */
-  .topBar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 30px;
-    margin-bottom: 30px;
-    border-bottom: 1px solid #333;
-  }
-  
-  .logo {
-    max-height: 40px;
-    width: auto;
-  }
-  
-  .socialIcons {
-    display: flex;
-    flex-wrap: wrap; /* Allow icons to wrap on smaller screens if needed */
-    gap: 15px;
-  }
-  
-  .socialIcons a {
-    color: #e0e0e0;
-    font-size: 1.3rem;
-    transition: color 0.3s ease;
-  }
-  
-  .socialIcons a:hover {
-    color: #ffffff;
-  }
-  
-  /* Main Content Grid */
-  .mainContent {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 30px;
-    margin-bottom: 30px;
-  }
-  
-  .footerColumn h4 {
-    color: #ffffff;
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-    font-weight: 600;
-  }
-  
-  .footerColumn p,
-  .footerColumn li {
-    margin-bottom: 10px;
-    color: #ffffff; /* Changed from #bdbdbd based on your CSS */
-  }
-  
-  .footerColumn a {
-    color: #f3f0f0; /* Based on your CSS */
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .footerColumn a:hover {
-    color: #ffffff;
-    text-decoration: underline;
-  }
-  
-  /* Quick Links specific styles */
-  .quickLinksList {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .quickLinksList li {
-    margin-bottom: 8px;
-  }
-  
-  .quickLinksList a {
-     text-decoration: none;
-  }
-  
-  
-  /* Awards specific styles */
-  .awardsContainer {
-    display: flex;
-    gap: 15px;
-    align-items: flex-start;
-    flex-wrap: wrap;
-  }
-  
-  .awardImage {
-    max-height: 60px;
-    width: auto;
-    opacity: 0.8;
-  }
-  
-  /* Divider */
-  .footerDivider {
-    border: 0;
-    border-top: 1px solid #333;
-    margin: 20px 0;
-  }
-  
-  /* Copyright */
-  .copyright {
-    text-align: center;
-    font-size: 0.85rem;
-    color: #f4eded; /* Based on your CSS */
-  }
-  
-  /* Responsive Adjustments (Example) */
-  @media (max-width: 768px) {
-    .topBar {
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-    }
-    .socialIcons {
-        justify-content: center; /* Center icons when stacked */
-    }
-    .mainContent {
-       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-       gap: 25px;
-    }
-    .footerColumn {
-      text-align: center;
-    }
-    .awardsContainer {
-       justify-content: center;
-    }
-  }
-  
-  @media (max-width: 480px) {
-      .mainContent {
-          grid-template-columns: 1fr;
-          text-align: center;
-      }
-      .footerColumn {
-        margin-bottom: 20px;
-      }
-      .logo {
-          max-height: 35px;
-      }
-      .socialIcons a {
-          font-size: 1.2rem;
-      }
-  }
+  background-color: #222;
+  color: #fff;
+  padding: 20px;
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.quickLinksList {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.quickLinksList a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 20px;
+}
+
+.quickLinksList a:hover {
+  color: #00bcd4;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 25px;
+}
+
+.socialIcons a {
+  color: #fff;
+  font-size: 30px;
+  transition: color 0.3s ease;
+}
+
+.socialIcons a:hover {
+  color: #00bcd4;
+}
+
+.bottomRow {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+}

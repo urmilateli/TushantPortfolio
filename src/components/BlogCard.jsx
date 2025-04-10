@@ -1,9 +1,9 @@
 // src/components/BlogSection/BlogCard.jsx
 import React from 'react';
 import { FaRegClock } from 'react-icons/fa'; // Clock icon
-import './BlogSection.css'; // We'll share the CSS file
+import './BlogSection.css'; 
+<h1>Blogs</h1>
 
-// Props: imageUrl, title, date, link (optional)
 const BlogCard = ({ imageUrl, title, date, link = '#' }) => {
   return (
     <div className="blog-card">

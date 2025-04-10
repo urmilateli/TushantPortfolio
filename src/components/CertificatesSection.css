@@ -1,7 +1,9 @@
 .certificates-section {
-    padding: 40px 20px; /* Add some padding around the section */
+    padding: 12% 5%; /* Add some padding around the section */
   background-color: rgba(0, 0, 0, 0.5);
     text-align: center; /* Center the heading */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+    background-color: transparent;
   }
   
   .certificates-section h2 {
@@ -28,7 +30,7 @@
     border-radius: 8px; /* Rounded corners */
     padding: 20px;
     text-align: left; /* Align text inside card to the left */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8); /* Subtle shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
     display: flex; /* Use flexbox for internal layout */
     flex-direction: column; /* Stack items vertically */

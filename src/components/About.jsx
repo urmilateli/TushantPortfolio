@@ -6,7 +6,6 @@ function About() {
     <>
       {/* Fixed full-screen background */}
       <div className="background-fixed"></div>
-
       {/* Scrollable content section */}
       <section id='about' className="about-section">
         <div className="about-content">

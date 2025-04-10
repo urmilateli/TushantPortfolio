@@ -82,9 +82,9 @@ function Projects() {
   return (
     <section className="projects-section" id="projects">
       <h2 className="projects-heading">My Projects</h2>
-      <p className="projects-subheading">
+      {/* <p className="projects-subheading">
         Here are a few projects I've worked on recently.
-      </p>
+      </p> */}
       <div className="projects-grid">
         {projectsData.map((project) => (
           // Spread operator passes all properties of 'project' as individual props

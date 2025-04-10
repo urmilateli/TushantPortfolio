@@ -6,6 +6,8 @@
     background-color: rgba(0, 0, 0, 0.5); 
     text-align: center;
     overflow-x: hidden; /* Prevent horizontal scrollbars during animations */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+    background-color: transparent;
   }
   
   /* --- Headings --- */

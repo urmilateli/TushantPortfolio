@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -24,6 +24,7 @@ a:hover {
 
 body {
   margin: 0;
+  padding: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
@@ -65,4 +66,19 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+} */
+
+
+
+
+
+
+
+/* Body background and text style */
+body{
+  /* padding-top: 65px; */
+  background: linear-gradient(135deg, #003366,#1f1f2e, #000000, #1f1f2e, #003366);
+  backdrop-filter: blur(10px);          /* blur effect */
+  -webkit-backdrop-filter: blur(10px); 
+
 }
